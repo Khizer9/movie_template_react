@@ -1,7 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
+  const linkName = useLocation().pathname;
+
+  const activeLink = (name, pathLink) => {
+    return pathLink === '/' + name ? "text-blue-600 font-bold" : "text-gray-400 hover:text-gray-500";
+  }
+
   return (
     <div>
       <header className="bg-white">
@@ -29,7 +35,7 @@ const Navbar = () => {
           <ul className="flex items-center gap-6 text-sm">
             <li>
               <Link
-                className="text-gray-500 transition hover:text-gray-500/75"
+                className={`text-gray-500 transition ${activeLink('', linkName)}`}
                 to="/"
               >
                 Home
@@ -38,7 +44,7 @@ const Navbar = () => {
 
             <li>
               <Link
-                className="text-gray-500 transition hover:text-gray-500/75"
+                className={`text-gray-500 transition ${activeLink('movies', linkName)}`}
                 to="/movies"
               >
                 Movies
@@ -46,39 +52,21 @@ const Navbar = () => {
             </li>
 
             <li>
-              <a
-                className="text-gray-500 transition hover:text-gray-500/75"
-                href="/"
+              <Link
+                className={`text-gray-500 transition ${activeLink('news', linkName)}`}
+                to="/news"
               >
-                History
-              </a>
+                News
+              </Link>
             </li>
 
             <li>
-              <a
-                className="text-gray-500 transition hover:text-gray-500/75"
-                href="/"
+              <Link
+                className={`text-gray-500 transition ${activeLink('tv-shows', linkName)}`}
+                to="/tv-shows"
               >
-                Services
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-500 transition hover:text-gray-500/75"
-                href="/"
-              >
-                Projects
-              </a>
-            </li>
-
-            <li>
-              <a
-                className="text-gray-500 transition hover:text-gray-500/75"
-                href="/"
-              >
-                Blog
-              </a>
+                TV Shows
+              </Link>
             </li>
           </ul>
         </nav>
@@ -86,20 +74,20 @@ const Navbar = () => {
 
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4">
-          <a
+          <Link
             className="rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow"
-            href="/"
+            to="/login"
           >
             Login
-          </a>
+          </Link>
 
           <div className="hidden sm:flex">
-            <a
+            <Link
               className="rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600"
-              href="/"
+              to="/register"
             >
               Register
-            </a>
+            </Link>
           </div>
         </div>
 

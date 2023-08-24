@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-.main {
-    
-}
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 5px;
+  }
+  
+  .movieContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .movieItem {
+    width: 15%;
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 10px 67px;
+  }
+  
+  .movieImg {
+    max-width: 100%;
+    height: auto;
+    width: 200px;
+    border-radius: 5px;
+  }
+  
+  .title {
+    line-height: 25px;
+  }
+  
+  .loadingIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+  }
+
+  .cards {
+    margin: 70px;
+  }
+
+  .img {
+    border-radius: 5px;
+  }
+
+  .activeLink {
+    color: blue !important; /* Change to the desired color */
+  }
