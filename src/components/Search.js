@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Search = ({ onSearch }) => {
+const Search = ({ onSearch, style }) => {
     const [search, setSearch] = useState('')
 
     const handleSearch = (e) => {
@@ -16,7 +16,7 @@ const Search = ({ onSearch }) => {
   return (
 
     <div>
-      <div class="relative" style={{ width: "30%", margin: "40px auto" }}>
+      <div class="relative" style={style}>
         <label for="Search" class="sr-only">
           {" "}
           Search{" "}

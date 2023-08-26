@@ -51,3 +51,9 @@
   .activeLink {
     color: blue !important; /* Change to the desired color */
   }
+
+  .mainTitle {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+  }

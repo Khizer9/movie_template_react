@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
 const Signup = () => {
   return (
@@ -173,6 +174,8 @@ const Signup = () => {
   </div>
 </section>
     </div>
+
+    <Footer />
     </>
   )
 }

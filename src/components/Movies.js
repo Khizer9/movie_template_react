@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import { useData } from "../context/DataContext";
 import Search from "./Search";
 import { useEffect, useState } from "react";
+import Footer from "./Footer";
 
 const Movies = () => {
 
@@ -25,9 +26,13 @@ const Movies = () => {
       <>
       <Navbar />
       <div className='App'>
-  <h1 style={{marginBottom: '40px', marginTop: '40px'}}>Movies</h1>
+  <h1 style={{ marginBottom: "40px", marginTop: "40px", fontSize: "36px" }}>Movies</h1>
       
-      <Search onSearch={handleSearch}/>
+      <Search onSearch={handleSearch} style={{
+    margin: '40px auto',
+    borderColor: 'gray',
+    border: '1px solid gray',
+    borderRadius: '5px'}}/>
 
   {loading ?   
     <div className='movieContainer'>
@@ -47,6 +52,7 @@ const Movies = () => {
       </svg>
     </div>}
 </div>
+<Footer />
   </>
     )
 };

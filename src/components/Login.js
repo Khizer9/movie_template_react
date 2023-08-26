@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import { Link } from 'react-router-dom'
+import Footer from './Footer'
 
 const Login = () => {
   return (
@@ -105,6 +106,8 @@ const Login = () => {
   </div>
 </div>
     </div>
+
+    <Footer />
     </>
   )
 }

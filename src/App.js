@@ -7,11 +7,15 @@ import News from './components/News';
 import Tvshows from './components/Tvshows';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import { NewsProvider } from './context/NewsContext';
+import { TvShowProvider } from './context/TvShowContext';
 
 function App() {
   return (
     <>
     <DataProvider>
+      <NewsProvider>
+        <TvShowProvider>
     <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home/>}/>
@@ -22,6 +26,8 @@ function App() {
           <Route path='/register' element={<Signup/>}/>
         </Routes>
       </BrowserRouter>
+      </TvShowProvider>
+      </NewsProvider>
       </DataProvider>
     </>
   );
