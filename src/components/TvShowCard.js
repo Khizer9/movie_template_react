@@ -4,7 +4,6 @@ import { useTvShow } from '../context/TvShowContext'
 
 const TvShowCard = ({searchQuery}) => {
     const {data, loading} = useTvShow()
-    console.log(data, "data")
     const [filtershow, setFilterShow] = useState([])
 
     useEffect(() => {

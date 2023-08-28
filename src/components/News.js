@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Search from "./Search";
 import { useNewsData } from "../context/NewsContext";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const News = () => {
   const { data, loading } = useNewsData();
@@ -48,7 +49,7 @@ const News = () => {
             filter.map((news) => (
               <div className="movieItem">
                 <img className="movieImg" src={news.urlToImage} alt="newImg" />
-                <h2 className="title">{news.title}</h2>
+                <h2 className="title"><Link to={news.url} target="_blank">{news.title}</Link></h2>
               </div>
             ))
           ) : (

@@ -3,7 +3,7 @@ import axios from "axios";
 export const FetchData = async () => {
     try {
      const response = await axios.get("https://www.omdbapi.com/?s=Batman&apikey=2eee8e6a");
-    //  console.log(response, "response");
+     console.log(response, "movies");
   
      return response.data;
     } catch (error) {
@@ -15,7 +15,8 @@ export const FetchData = async () => {
   export const NewsDataApi = async () => {
     try {
      const response = await axios.get('https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=f34d3502e8bb4152b75e4e9964e04293')
-      return response.data;
+     console.log(response, "News");
+     return response.data;
 
     } catch (error) {
       console.log(error);
@@ -25,6 +26,7 @@ export const FetchData = async () => {
   export const TvShowApi = async () => {
     try {
       const response = await axios.get('https://www.episodate.com/api/most-popular?page=1')
+      console.log(response, "TvShows");
       return response.data;
       
     } catch (error) {

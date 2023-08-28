@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNewsData } from "../context/NewsContext";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ searchQuery }) => {
   const { data, loading } = useNewsData();
@@ -34,9 +35,9 @@ const NewsCard = ({ searchQuery }) => {
                   {res.publishedAt}
                 </time>
 
-                <a href="#">
+                <Link to={res.url} target="_blank">
                   <h3 class="mt-0.5 text-lg text-white">{res.title}</h3>
-                </a>
+                </Link>
 
                 <p class="mt-2 line-clamp-3 text-sm/relaxed text-white/95">
                   {res.description}
