@@ -9,7 +9,7 @@ const NewsCard = ({ searchQuery }) => {
   useEffect(() => {
     if (loading && data) {
       const filter = data.filter((res) =>
-        res.title.toLowerCase().includes(searchQuery.toLowerCase())
+        res.title?.toLowerCase().includes(searchQuery.toLowerCase())
       );
       setFilteredMovie(filter);
     }
